@@ -1,0 +1,927 @@
+/* =========================================
+   SHUBHAM PANDEY XO
+   NEON MOBILE DESIGN
+========================================= */
+
+
+/* ---------- RESET ---------- */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ---------- BODY ---------- */
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+
+        Arial,
+
+        Helvetica,
+
+        sans-serif;
+
+    color:white;
+
+    background:
+
+        radial-gradient(
+
+            circle at top,
+
+            #39105f,
+
+            #12051d 55%,
+
+            #050208
+
+        );
+
+}
+
+
+/* ---------- SCREEN ---------- */
+
+.screen{
+
+    min-height:100vh;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+}
+
+
+.screen.active{
+
+    display:flex;
+
+}
+
+
+/* ---------- CARD ---------- */
+
+.card{
+
+    width:100%;
+
+    max-width:600px;
+
+    padding:45px 28px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.08
+
+        );
+
+    border:1px solid
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.15
+
+        );
+
+    box-shadow:
+
+        0 0 30px
+
+        rgba(
+
+            220,
+
+            0,
+
+            255,
+
+            0.25
+
+        ),
+
+        inset 0 0 25px
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.03
+
+        );
+
+    backdrop-filter:
+
+        blur(15px);
+
+}
+
+
+/* ---------- LOGO ---------- */
+
+.game-logo{
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:65px;
+
+    border-radius:50%;
+
+    border:3px solid
+
+        #ed43ff;
+
+    box-shadow:
+
+        0 0 15px
+
+        #ed43ff,
+
+        0 0 45px
+
+        #a000ff;
+
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+h1{
+
+    margin-bottom:20px;
+
+    font-size:clamp(
+
+        30px,
+
+        8vw,
+
+        65px
+
+    );
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #ff4bd8,
+
+            #a879ff,
+
+            #22d9ff
+
+        );
+
+    -webkit-background-clip:
+
+        text;
+
+    -webkit-text-fill-color:
+
+        transparent;
+
+}
+
+
+p{
+
+    margin-bottom:25px;
+
+    color:#d7cce2;
+
+    font-size:18px;
+
+}
+
+
+/* ---------- INPUT ---------- */
+
+input{
+
+    width:100%;
+
+    padding:20px;
+
+    margin:15px 0 20px;
+
+    color:white;
+
+    font-size:18px;
+
+    text-align:center;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:20px;
+
+    background:
+
+        rgba(
+
+            0,
+
+            0,
+
+            0,
+
+            0.35
+
+        );
+
+    border:1px solid
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.15
+
+        );
+
+}
+
+
+input:focus{
+
+    border-color:
+
+        #e833ff;
+
+    box-shadow:
+
+        0 0 20px
+
+        rgba(
+
+            232,
+
+            51,
+
+            255,
+
+            0.5
+
+        );
+
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+button{
+
+    width:100%;
+
+    padding:20px;
+
+    margin-top:15px;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:22px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #9146ff,
+
+            #ff2bbd
+
+        );
+
+    box-shadow:
+
+        0 8px 25px
+
+        rgba(
+
+            255,
+
+            0,
+
+            200,
+
+            0.35
+
+        );
+
+    transition:
+
+        0.25s;
+
+}
+
+
+button:active{
+
+    transform:
+
+        scale(
+
+            0.96
+
+        );
+
+}
+
+
+button:hover{
+
+    box-shadow:
+
+        0 0 30px
+
+        #ff29ce;
+
+}
+
+
+/* ---------- MODE BUTTON ---------- */
+
+.modeBtn{
+
+    margin-top:20px;
+
+}
+
+
+/* ---------- MESSAGE ---------- */
+
+.message{
+
+    color:
+
+        #ff75e8;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================================
+   GAME
+========================================= */
+
+.game-container{
+
+    width:100%;
+
+    max-width:700px;
+
+    text-align:center;
+
+}
+
+
+/* ---------- GAME HEADER ---------- */
+
+.game-container header
+
+.game-logo{
+
+    width:115px;
+
+    height:115px;
+
+    font-size:60px;
+
+}
+
+
+/* ---------- STATUS ---------- */
+
+#gameStatus{
+
+    margin-top:10px;
+
+    color:#20ddff;
+
+    font-size:23px;
+
+    font-weight:bold;
+
+}
+
+
+/* ---------- SCOREBOARD ---------- */
+
+.scoreboard{
+
+    display:grid;
+
+    grid-template-columns:
+
+        1fr 1fr;
+
+    gap:20px;
+
+    margin:30px 0;
+
+}
+
+
+.score-box{
+
+    padding:25px 15px;
+
+    border-radius:25px;
+
+    background:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.08
+
+        );
+
+    border:1px solid
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.15
+
+        );
+
+}
+
+
+.score-box span{
+
+    display:block;
+
+    color:#d8cce2;
+
+    font-size:19px;
+
+}
+
+
+.score-box strong{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:50px;
+
+    color:#ff4dd8;
+
+    text-shadow:
+
+        0 0 15px
+
+        #ff22d0;
+
+}
+
+
+/* =========================================
+   GAME BOARD
+========================================= */
+
+.game-board{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            3,
+
+            1fr
+
+        );
+
+    gap:14px;
+
+    width:100%;
+
+    max-width:620px;
+
+    margin:auto;
+
+}
+
+
+.cell{
+
+    aspect-ratio:1/1;
+
+    margin:0;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:clamp(
+
+        55px,
+
+        15vw,
+
+        100px
+
+    );
+
+    font-weight:900;
+
+    border-radius:25px;
+
+    background:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.08
+
+        );
+
+    border:1px solid
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.16
+
+        );
+
+    box-shadow:
+
+        inset 0 0 20px
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.03
+
+        );
+
+}
+
+
+.cell.x{
+
+    color:#ff38db;
+
+    text-shadow:
+
+        0 0 15px
+
+        #ff00cc,
+
+        0 0 35px
+
+        #ff00cc;
+
+}
+
+
+.cell.o{
+
+    color:#22dfff;
+
+    text-shadow:
+
+        0 0 15px
+
+        #00d9ff,
+
+        0 0 35px
+
+        #00d9ff;
+
+}
+
+
+.cell.winner{
+
+    animation:
+
+        winnerGlow
+
+        0.8s
+
+        infinite
+
+        alternate;
+
+}
+
+
+@keyframes winnerGlow{
+
+    from{
+
+        box-shadow:
+
+            0 0 10px
+
+            #ff24db;
+
+    }
+
+    to{
+
+        box-shadow:
+
+            0 0 45px
+
+            #ff24db;
+
+    }
+
+}
+
+
+/* =========================================
+   RESULT BOX
+========================================= */
+
+.result-box{
+
+    display:none;
+
+    margin-top:35px;
+
+    padding:30px 20px;
+
+    border-radius:25px;
+
+    background:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.08
+
+        );
+
+    border:1px solid
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.2
+
+        );
+
+}
+
+
+.result-box.show{
+
+    display:block;
+
+    animation:
+
+        resultAppear
+
+        0.5s
+
+        ease;
+
+}
+
+
+.result-box h2{
+
+    margin-bottom:15px;
+
+    color:#ff4cdb;
+
+    font-size:30px;
+
+}
+
+
+.result-box p{
+
+    margin-bottom:10px;
+
+}
+
+
+@keyframes resultAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            scale(
+
+                0.8
+
+            );
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            scale(
+
+                1
+
+            );
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media(
+
+    max-width:600px
+
+){
+
+    .screen{
+
+        padding:18px;
+
+    }
+
+
+    .card{
+
+        padding:35px 20px;
+
+    }
+
+
+    .game-container{
+
+        padding-top:15px;
+
+    }
+
+
+    .game-container h1{
+
+        font-size:38px;
+
+    }
+
+
+    .scoreboard{
+
+        gap:12px;
+
+    }
+
+
+    .score-box{
+
+        padding:20px 8px;
+
+    }
+
+
+    .score-box span{
+
+        font-size:16px;
+
+    }
+
+
+    .score-box strong{
+
+        font-size:42px;
+
+    }
+
+
+    .game-board{
+
+        gap:10px;
+
+    }
+
+
+    .cell{
+
+        border-radius:20px;
+
+    }
+
+          }
